@@ -5,7 +5,78 @@
     padding: 0;
     font-family: 'DM Sans';
   }
+/***************DISCLAIMER **********************/
+.popup{
+  background-color: #ffffff;
+  width: 400px;
+  padding: 30px 40px;
+  position: fixed;
+  transform: translate(-50%,-50%);
+  left: 50%;
+  top: 50%;
+  border-radius: 8px;
+  font-family: "Poppins",sans-serif;
+  display: none;
+  text-align: center;
+  }
+  .popup button{
+    display: block;
+    margin:  0 0 20px auto;
+    background-color: transparent;
+    font-size: 40px;
+    color: red;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  .popup p{
+    font-size: 14px;
+    text-align: justify;
+    margin: 20px 0;
+    line-height: 25px;
+  }
+
+  /***************** Animations *******************/
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
   
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%);
+    }
+  
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInFromTop {
+    0% {
+      transform: translateY(-100%);
+    }
+  
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInFromBottom {
+    0% {
+      transform: translateY(100%);
+    }
+  
+    100% {
+      transform: translateX(0);
+    }
+  }
+/***************HEADER **********************/
   header {
     display: flex;
     justify-content: flex-end;
@@ -62,7 +133,7 @@ a{
     background-color: #3c1642b9;
   }
   
-  /* Mobile Nav */
+  /************************* Mobile Nav ***************************/
   
   .menu {
     display: none;
@@ -111,6 +182,8 @@ a{
     color: #edf0f1;
     cursor: pointer;
   }
+
+  /*************************MEDIA QUERIES**********************/
   
   @media screen and (max-height: 450px) {
     .overlay a {
@@ -159,7 +232,7 @@ a{
 
 
 
-/*****************************Welcome*********************************/
+/*****************************Welcome/HERO SECTION*********************************/
 p{
     color: #3C1642;
 }
@@ -243,6 +316,7 @@ h1{
     color: #3C1642;
     padding: 40px;
 }
+/*****************************ABOUT SECTION*********************************/
 
 #offerings-box{
     display: flex;
@@ -279,6 +353,8 @@ h1{
     text-align: center;
 }
 
+/*****************************OUR MODELS*********************************/
+
 #our-models{
     background: linear-gradient(108.85deg, #9896F0 19.65%, #FBC8D5 62.72%);
     padding-bottom: 50px;
@@ -298,6 +374,7 @@ h1{
 }
 
 
+/*****************************JOIN US*********************************/
 
 #join{
     padding: 50px;
@@ -323,6 +400,9 @@ h1{
   padding-right: 20px;
 }
 
+
+/*****************************FOOTER*********************************/
+
 footer{
   background: #040318;
   color: #FFFFFF;
@@ -331,12 +411,12 @@ footer{
   width: auto;
 }
 
-#flex{
+#main-footer{
   display: flex;
 
 }
 
-#flex ul {
+#main-footer ul {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
@@ -371,40 +451,6 @@ footer{
   color: #1C9CEA;
 }
 
-
-
-
-.popup{
-  background-color: #ffffff;
-  width: 400px;
-  padding: 30px 40px;
-  position: fixed;
-  transform: translate(-50%,-50%);
-  left: 50%;
-  top: 50%;
-  border-radius: 8px;
-  font-family: "Poppins",sans-serif;
-  display: none;
-  text-align: center;
-}
-.popup button{
-  display: block;
-  margin:  0 0 20px auto;
-  background-color: transparent;
-  font-size: 40px;
-  color: red;
-  border: none;
-  outline: none;
-  cursor: pointer;
-}
-.popup p{
-  font-size: 14px;
-  text-align: justify;
-  margin: 20px 0;
-  line-height: 25px;
-}
-
-
 #copyright{
   display: flex;
   padding-top: 10px;
@@ -427,43 +473,7 @@ footer{
   color:white;
 }
 
-/* Animations */
-@keyframes slideInFromLeft {
-  0% {
-    transform: translateX(-100%);
-  }
 
-  100% {
-    transform: translateX(0);
-  }
-}
 
-@keyframes slideInFromRight {
-  0% {
-    transform: translateX(100%);
-  }
 
-  100% {
-    transform: translateX(0);
-  }
-}
 
-@keyframes slideInFromTop {
-  0% {
-    transform: translateY(-100%);
-  }
-
-  100% {
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideInFromBottom {
-  0% {
-    transform: translateY(100%);
-  }
-
-  100% {
-    transform: translateX(0);
-  }
-}
