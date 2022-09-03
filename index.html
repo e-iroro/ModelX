@@ -5,9 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/9a2f8c0987.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
     <title>ModelX</title>
 </head>
 <body>
+    <div class="popup">
+        <button id="close">&times;</button>
+        <h2>DISCLAIMER</h2>
+        <p>
+            ModelX is a fictional modelling agency. We are in no way affiliated with the individuals whose images appear on this website. All images belong to their respective owners and ModelX does not claim any right over them.
+        </p>
+    </div>
     <header>
         <a class="logo" href="/"><img src="images/logo.svg" alt="logo"></a>
         <nav>
@@ -33,16 +42,14 @@
     </div>
     <section id="welcome">
         <div class="textbox welcome">
-            <h1>
-                Let's Magnify Your Talent
-            </h1>
+            <h1 style="text-align: left;">Let's Magnify Your Talent</h1>
             <p>
                 ModelX is your best bet for a successful modelling career. We provide you with support from the best professionals in the industry.
             </p>
             <p>
                 Let's be part of your success story and shoot you off into the limelight
             </p>
-            <button>
+            <button id="join-button">
                 Join Us Now
             </button>
         </div>
@@ -60,23 +67,24 @@
             </p>
         </div>
         <div id=offerings-box>
-        <div class="offerings">
-            <img src="/Images/shoes.png" alt="">
-            <p>
-                We provide our models with unique accessories and clothings that makes all our models stand out from the rest
-            </p><br><br>
-        </div>
-        <div class="offerings">
-            <img src="/Images/makeup.png" alt="">
-            <p>
-                We collaborate with the best and most talented make up artistes in the industry. They make our shoots amazing with their Midas touch.
-            </p><br><br>
-        </div>
-        <div class="offerings">
-            <img src="Images/camera.png" alt="">
-            <p>
-                Our photography team is one of the best in the industry. They are the ones that give our models the finishing touch that makes us and our models known as the best
-            </p>
+            <div class="offerings">
+                <img src="/Images/shoes.png" alt="">
+                <p>
+                    We provide our models with unique accessories and clothings that makes all our models stand out from the rest
+                </p><br><br>
+            </div>
+            <div class="offerings">
+                <img src="Images/makeup.png" alt="">
+                <p>
+                    We collaborate with the best and most talented make up artistes in the industry. They make our shoots amazing with their Midas touch.
+                </p><br><br>
+            </div>
+            <div class="offerings">
+                <img src="Images/camera.png" alt="">
+                <p>
+                    Our photography team is one of the best in the industry. They are the ones that give our models the finishing touch that makes us and our models known as the best
+                </p>
+            </div>
         </div>
     </section>
     <section id="our-models">
@@ -109,7 +117,7 @@
     </section>
     <section id="join">
         <div id="body-join">
-            <div class="textbox">
+            <div class="join-text">
                 <h1>
                     Join the List
                 </h1>
@@ -119,9 +127,32 @@
             </div>
         </div>
     </section> 
+    <footer>
+        <div id="flex">
+            <a class="logo" href="/"><img src="images/logo.svg" alt="logo"></a>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Models</li>
+                <li>Registration</li>
+                <li>Contact</li>
+            </ul>
+            <div id="socials">
+                <ul>
+                    <li><a href="#"><i class='fab fa-linkedin-in'></i></a></li>
+                    <li><a href="#"><i class='fab fa-instagram'></i></a></li>
+                    <li><a href="#"><i class='fab fa-facebook-f'></i></a></li>
+                    <li><a href="#"><i class='fab fa-twitter'></i></a></li>
+                </ul>
+            </div>    
+        </div>
+        <hr>
+        <div id="copyright">
+            <p>© Copyright 2022 . All Rights Reserved</p>
+            <p>Designed by <a href="https://linktr.ee/a33sha">Aishat Dosunmu</a></p>
+            <p>Built by <a href="https://linktr.ee/eruiroro">Eruoghene Iroro</a></p>
+            <p>Privacy Policy</p>
+        </div>
+    </footer>
 </body>
-<footer>
-    <p>Designed by <a href="http://">Aishat</a></p>
-    <p>Built by <a href="">Eruoghene Iroro</a></p>
-</footer>
 </html>

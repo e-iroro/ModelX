@@ -13,7 +13,11 @@
     padding: 30px 10%;
     background-color: #24252a;
   }
-  
+a{
+  text-decoration: none;
+  color: white;
+
+} 
   .logo {
     margin-right: auto;
   }
@@ -41,13 +45,13 @@
   }
   
   .nav__links li a:hover {
-    color: #0088a9;
+    color: #3C1642;
   }
   
   .cta {
     margin-left: 20px;
     padding: 9px 25px;
-    background-color: rgba(0, 136, 169, 1);
+    background-color: #3C1642;
     border: none;
     border-radius: 50px;
     cursor: pointer;
@@ -55,7 +59,7 @@
   }
   
   .cta:hover {
-    background-color: rgba(0, 136, 169, 0.8);
+    background-color: #3c1642b9;
   }
   
   /* Mobile Nav */
@@ -97,7 +101,7 @@
   
   .overlay a:hover,
   .overlay a:focus {
-    color: #0088a9;
+    color: #3C1642;
   }
   .overlay .close {
     position: absolute;
@@ -127,17 +131,34 @@
     .menu {
       display: initial;
     }
-    #welcome, #offerings-box, #model-box {
-        flex-direction: column;
-    }
   }
 
   @media (max-width: 600px){
-    #welcome, #offerings-box, #model-box {
-      flex-direction: column;
+    #flex li {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-evenly;
+      width: 150%;
+      list-style: none;
+      align-items: flex-start;   
     }
+    
+    #copyright p{
+      display: block;
+      text-align: center;
+      color: white;
+    }
+
+    #copyright a{
+      color:#3C1642;
+    }
+
   }
-  
+
+
+
+
+
 /*****************************Welcome*********************************/
 p{
     color: #3C1642;
@@ -173,19 +194,51 @@ h1{
     width: 650px;
     padding: 55px;
     align-self: center;
+    animation: slideInFromLeft 1s ease-in;
+
+}
+
+#join-button{
+  background: #3C1642;
+  border-radius: 46px;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 16px 72px;
+  gap: 10px;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 26px;
+  margin-top: 20px;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+#join-button:hover{
+    background-color: white;
+    color: #3C1642;
+    height: 80px;
+    width:300px ;
+    padding: 25px 90px;
+
 }
 
 .denola{
     max-width: 100%;
     height: auto;
+    padding-bottom: 0%;
+    animation: slideInFromRight 1s ease-in;
+
 }
 
-.textbox {
+.textbox  {
     font-family: 'DM Sans';
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
-    line-height: 37px;
     text-align: center;
     color: #3C1642;
     padding: 40px;
@@ -193,10 +246,9 @@ h1{
 
 #offerings-box{
     display: flex;
-    padding: 40px;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-flow: row wrap;
-
+    animation: slideInFromBottom 1.4s ease-in;
 }
 
 .offerings{
@@ -210,6 +262,19 @@ h1{
     padding-bottom: 15px;
 }
 
+.offerings img:hover{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 15px;
+  height: 130px;
+  cursor: pointer;
+}
+
+.about{
+  animation: slideInFromBottom 1s ease-in;
+
+}
 .offerings p{
     text-align: center;
 }
@@ -224,18 +289,181 @@ h1{
     justify-content: space-evenly;
     flex-flow: row wrap;
 }
-
 .models p{
     text-align: center;
 }
+.models img:hover{
+  transform: translateY(-20px);
+  cursor: pointer;
+}
+
+
+
 #join{
-    height:546px;
     padding: 50px;
+    align-content: center;
 }
 #body-join{
     background: linear-gradient(108.85deg, #9896F0 19.65%, #FBC8D5 62.72%);
     border-radius: 25px;
-    height: auto;
+    max-height: 500px;
+    min-height: 00px;
     padding-top: 30px;
     padding-bottom: 70px;
+}
+
+.join-text  {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  color: #3C1642;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+footer{
+  background: #040318;
+  color: #FFFFFF;
+  padding: 60px;
+  height: auto;
+  width: auto;
+}
+
+#flex{
+  display: flex;
+
+}
+
+#flex ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  width: 90%;
+  list-style: none;
+  align-items: flex-start;
+  padding-left: 30px;
+  padding-bottom: 20px;
+  
+}
+
+#socials{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  width: 20%;
+}
+
+.fa-linkedin-in:hover {
+  color: rgb(9, 9, 216);
+}
+
+.fa-facebook-f:hover {
+  color: #1773EA;
+}
+
+.fa-instagram:hover {
+  color: #B32E87;
+}
+
+.fa-twitter:hover {
+  color: #1C9CEA;
+}
+
+
+
+
+.popup{
+  background-color: #ffffff;
+  width: 400px;
+  padding: 30px 40px;
+  position: fixed;
+  transform: translate(-50%,-50%);
+  left: 50%;
+  top: 50%;
+  border-radius: 8px;
+  font-family: "Poppins",sans-serif;
+  display: none;
+  text-align: center;
+}
+.popup button{
+  display: block;
+  margin:  0 0 20px auto;
+  background-color: transparent;
+  font-size: 40px;
+  color: red;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.popup p{
+  font-size: 14px;
+  text-align: justify;
+  margin: 20px 0;
+  line-height: 25px;
+}
+
+
+#copyright{
+  display: flex;
+  padding-top: 10px;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  color: white;
+
+}
+#copyright p{
+  display: block;
+  text-align: center;
+  color: white;
+}
+
+#copyright a{
+  color:#3C1642;
+}
+
+#copyright a:hover{
+  color:white;
+}
+
+/* Animations */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }
