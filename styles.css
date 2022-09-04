@@ -207,13 +207,17 @@ a{
   }
 
   @media (max-width: 600px){
-    #flex li {
+    #main-footer li {
       display: flex;
       flex-flow: row wrap;
       justify-content: space-evenly;
       width: 150%;
       list-style: none;
       align-items: flex-start;   
+    }
+
+    #main-footer img {
+      width: 105%;
     }
     
     #copyright p{
