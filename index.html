@@ -5,8 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
     <script src="https://kit.fontawesome.com/9a2f8c0987.js" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
     <title>ModelX</title>
 </head>
 <body>
@@ -18,7 +21,7 @@
         </p>
     </div>
     <header>
-        <a class="logo" href="/"><img src="images/logo.svg" alt="logo"></a>
+        <a class="logo" href="/"><img src="Images/default-monochrome-white.svg" alt="logo"></a>
         <nav>
             <ul class="nav__links">
                 <li><a href="#">Home</a></li>
@@ -67,23 +70,24 @@
             </p>
         </div>
         <div id=offerings-box>
-        <div class="offerings">
-            <img src="Images/shoes.png" alt="">
-            <p>
-                We provide our models with unique accessories and clothings that makes all our models stand out from the rest
-            </p><br><br>
-        </div>
-        <div class="offerings">
-            <img src="Images/makeup.png" alt="">
-            <p>
-                We collaborate with the best and most talented make up artistes in the industry. They make our shoots amazing with their Midas touch.
-            </p><br><br>
-        </div>
-        <div class="offerings">
-            <img src="Images/camera.png" alt="">
-            <p>
-                Our photography team is one of the best in the industry. They are the ones that give our models the finishing touch that makes us and our models known as the best
-            </p>
+            <div class="offerings">
+                <img src="Images/shoes.png" alt="">
+                <p>
+                    We provide our models with unique accessories and clothings that makes all our models stand out from the rest
+                </p><br><br>
+            </div>
+            <div class="offerings">
+                <img src="Images/makeup.png" alt="">
+                <p>
+                    We collaborate with the best and most talented make up artistes in the industry. They make our shoots amazing with their Midas touch.
+                </p><br><br>
+            </div>
+            <div class="offerings">
+                <img src="Images/camera.png" alt="">
+                <p>
+                    Our photography team is one of the best in the industry. They are the ones that give our models the finishing touch that makes us and our models known as the best
+                </p>
+            </div>
         </div>
     </section>
     <section id="our-models">
@@ -127,8 +131,8 @@
         </div>
     </section> 
     <footer>
-        <div id="flex">
-            <a class="logo" href="/"><img src="images/logo.svg" alt="logo"></a>
+        <div id="main-footer">
+            <a class="logo" href="/"><img src="Images/default-monochrome-white.svg" alt="logo"></a>
             <ul>
                 <li>Home</li>
                 <li>About</li>
@@ -153,5 +157,37 @@
             <p>Privacy Policy</p>
         </div>
     </footer>
+    <script>
+        //For mobile menu
+
+        const doc = document;
+        const menuOpen = doc.querySelector(".menu");
+        const menuClose = doc.querySelector(".close");
+        const overlay = doc.querySelector(".overlay");
+
+        menuOpen.addEventListener("click", () => {
+        overlay.classList.add("overlay--active");
+        });
+
+        menuClose.addEventListener("click", () => {
+        overlay.classList.remove("overlay--active");
+        });
+
+
+        //For disclaimer
+        window.addEventListener("load", function(){
+            setTimeout(
+                function open(event){
+                    document.querySelector(".popup").style.display = "block";
+                },
+                1000
+            )
+        });
+
+
+        document.querySelector("#close").addEventListener("click", function(){
+            document.querySelector(".popup").style.display = "none";
+        });
+    </script>
 </body>
 </html>
